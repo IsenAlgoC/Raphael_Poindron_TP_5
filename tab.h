@@ -7,12 +7,12 @@
 #define TAILLEPLUS 50
 
 int InitialisationTableau(int* tab, int size) {
-	if (tab == NULL || size < 0) {  //Si on ne peut pas initialiser le tableau
+	if (tab == NULL || size < 0) {  // initialisation du tableau impossible
 		return(-1);
 	}
 
-	else {                                      //Si on peut
-		for (int i = 0; i < size; i++) {         //on initialise à 0
+	else {                                      // si possible
+		for (int i = 0; i < size; i++) {         // initialisation des zÃ©ros
 			*(tab + i) = 0;
 		}
 		return(size);
@@ -20,12 +20,12 @@ int InitialisationTableau(int* tab, int size) {
 }
 
 int AfficheTableau(int* tab, int size, int nbElts) {
-	if (tab == NULL || size < 0 || size < nbElts) { //Si on ne peut pas afficher
+	if (tab == NULL || size < 0 || size < nbElts) { //affichage impossible
 		return(-1);
 	}
 	else {
-		for (int i = 0; i < nbElts; i++) {   //On affiche chaque élément
-			printf(" %d", *(tab + i));        //un par un
+		for (int i = 0; i < nbElts; i++) {   // affichage de chaque element
+			printf(" %d", *(tab + i));        
 		}
 		return(0);
 	}
