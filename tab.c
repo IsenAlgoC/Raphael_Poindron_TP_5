@@ -6,18 +6,18 @@
 #define TAILLEDEPART 100
 #define TAILLEPLUS 50
  
-int* myTab2 = NULL;
+int* myTab2 = NULL; // cr√©ation du tableau
 
 int main() {
 
-	myTab2 = (int*)malloc(TAILLEDEPART * sizeof(int));
+	myTab2 = (int*)malloc(TAILLEDEPART * sizeof(int)); 
 	int TAB2SIZE = TAILLEDEPART;
 
 	if (myTab2 != NULL) {
 		InitialisationTableau(myTab2, TAB2SIZE); // initialisation tableau 
 	}
 	else {
-		printf("mÈmoire insuffisante");
+		printf("m√©moire insuffisante");
 		return(-1);
 	}
 	for (int i = 0; i < TAILLEDEPART; i++) {   //remplissage 
@@ -26,6 +26,6 @@ int main() {
 	AfficheTableau(myTab2, TAB2SIZE, 20);  //affichage valeur
 
 
-	free(myTab2);  // libÈration mÈmoire mÈmoire
+	free(myTab2);  // lib√©ration m√©moire m√©moire
 
 }
